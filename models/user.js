@@ -60,7 +60,6 @@ module.exports = function (sequelize, DataTypes) {
 						}
 
 						resolve(user);
-						res.json(user.toPublicJSON());
 					}, function(e) {
 						reject();
 					});
@@ -87,8 +86,6 @@ module.exports = function (sequelize, DataTypes) {
 					return token;
 				} catch (e) {
 					return undefined;
-					Primise.onPossiblyUnhandledRejection(function(){});
-				}
 			}
 		}
 	});
